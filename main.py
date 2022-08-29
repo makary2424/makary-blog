@@ -27,10 +27,6 @@ def create():
 def not_found(e):
     return redirect('/')
 
-@app.route("/", methods=["Redirect"])
-def redirect():
-    return redirect('/')
-
 @app.route("/create2", methods=["Get", "Post"])
 def create2():
     if request.method == 'POST':
