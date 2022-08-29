@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block title %} Создать страницу {% endblock %}
+{% block content %}
+{% if session.get('user') != 'Макарий' %}
+<form method="Redirect">
+
+</form>
+{% endif %}
+{% if session.get('user') == 'Макарий' %}
+<form method="post">
+
+  <p><b>Заголовок статьи</b></p>
+    <input name="title" type="text">
+    <p><b>Текст статьи</b></p>
+    <textarea name="text" id="" cols="30" rows="10"></textarea>
+    <p><input type="submit"></p>
+</form>
+{% endif %}
+{% endblock %}

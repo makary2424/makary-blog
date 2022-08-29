@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title> {% block title %} {% endblock %}</title>
+</head>
+<body>
+<a href="/">Главная</a>
+{% if session.get('user') == 'Макарий' %}
+<a href="/create">Создать статью</a>
+{% endif %}
+{% if not session.get('user') %}
+<a href="/login", id="login">Вход</a>
+{% else %}
+<a href="/logout", id="login">Выход ({{session.get('user')}})</a>
+{% endif %}
+{% block content %}
+{% endblock %}
+<footer><center>Сайт разработал Макарий. 2022 г. </center></footer>
+</body>
+</html>
