@@ -54,6 +54,12 @@ def login():
         return redirect("/")
     return render_template('login.html')
 
+@app.route("/registr")
+def registr():
+    return render_template('registr.html')
+
+
+
 
 @app.route('/logout')
 def logout():
@@ -61,6 +67,6 @@ def logout():
     return redirect('/')
 
 
-app.run(debug=True)
+app.run(debug=True, port=8080)
 
 

@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block title %} Регистрация {% endblock %}
+{% block content %}
+<h2>Регистрация нового пользователя</h2>
+<form method="POST">
+    <p>Введите Ваше имя:</p>
+    <input name="user_name" type="text">
+    <p>Введите пароль:</p>
+    <input name="user_password" type="password">
+    <p>Введите почту:</p>
+    <input name="user_e_mail" type="text">
+
+
+
+    <input type="submit" value="Войти">
+</form>
+{% endblock %}
+
+</body>
+</html>
